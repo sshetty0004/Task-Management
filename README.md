@@ -31,7 +31,7 @@ Ensure you have the following installed:
 2. Installing Dependencies
    After cloning the repository, navigate to the project directory and install the dependencies using npm:
    ```bash
-   cd angular17-project
+   cd task-manager
    npm install
 
 3. Running the Application
