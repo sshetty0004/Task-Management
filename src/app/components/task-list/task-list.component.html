@@ -1,0 +1,42 @@
+<div class="task-filters">
+    <button (click)="filterTasks('all')">
+        <mat-icon>list</mat-icon> All
+    </button>
+    <button (click)="filterTasks('completed')">
+        <mat-icon>check_circle</mat-icon> Completed
+    </button>
+    <button (click)="filterTasks('incomplete')">
+        <mat-icon>error_outline</mat-icon> Incomplete
+    </button>
+    <button (click)="clearCompleted()" class="clear">
+        <mat-icon>delete</mat-icon> Clear Completed
+    </button>
+</div>
+<ul class="task-list">
+    <li *ngFor="let task of filteredTasks" [class.completed]="task.completed">
+        <div *ngIf="editingTaskId === task.id; else viewMode">
+            <input type="text" [(ngModel)]="task.title" placeholder="Task Title" />
+            <input type="date" [(ngModel)]="task.dueDate" />
+            <textarea [(ngModel)]="task.description" placeholder="Task Description (Optional)"></textarea>
+            <button class="edit-button"
+                style=" margin-left: 198px; position: relative; top: 12px; background-color:  rgba(248, 199, 5, 0.856);"
+                (click)="editTask(task)">Save</button>
+            <button class="edit-button"
+                style=" margin-left: 300px; position: relative; bottom: 22px; background-color:rgba(248, 199, 5, 0.856);"
+                (click)="cancelEdit()">Cancel</button>
+        </div>
+        <ng-template #viewMode>
+            <input type="checkbox" [(ngModel)]="task.completed" (change)="toggleComplete(task)" />
+            <div class="task-details">
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.description }}</p>
+                <small>{{ task.dueDate | date }}</small>
+            </div>
+            <button *ngIf="!task.completed" class="edit-button" (click)="startEditTask(task)">
+                <mat-icon style="position: relative;top: 7px;">edit</mat-icon>Edit</button>
+            <button class="delete-button" (click)="deleteTask(task.id)">
+                <mat-icon style="position: relative;top: 7px;">delete</mat-icon>Delete
+            </button>
+        </ng-template>
+    </li>
+</ul>

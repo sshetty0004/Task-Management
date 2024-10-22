@@ -1,0 +1,6 @@
+
+<div class="main">
+  <h1 class="heading">TASK TRACKER</h1>
+</div>
+<app-task-input (taskAdded)="taskList.addTask($event)"></app-task-input>
+<app-task-list #taskList></app-task-list>

@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 style="text-align: center; font-weight: bold">NOTE TASK BELOW</h1>
+    <mat-card class="task-input-card">
+        <div class="title">
+            <input matInput type="text" [(ngModel)]="title" placeholder="Task Title" />
+        </div>
+        <div class="date">
+            <input matInput type="date" [(ngModel)]="dueDate" />
+        </div>
+        <div class="description">
+            <textarea matInput [(ngModel)]="description" placeholder="Task Description"></textarea>
+        </div>
+        <button mat-raised-button (click)="addTask()"
+            style="margin-top: 40px; background-color: rgba(248, 199, 5, 0.856); color: black; font-size: 18px; font-weight: 800; outline: none;">
+            <mat-icon style="color: black;">add</mat-icon> Add Task
+        </button>
+    </mat-card>
+</div>

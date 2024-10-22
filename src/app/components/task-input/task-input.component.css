@@ -1,0 +1,84 @@
+.container {
+    height: 600px;
+    width: 780px;
+    border: 1px solid black;
+    position: relative;
+    left: 32px;
+    top: -19px;
+    border-radius: 25px;
+    background-color: rgba(207, 205, 205, 0.2);
+    border: none;
+    box-shadow: 0 2px 5px rgba(11,11,11,0.5);
+}
+
+h1 {
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    position: relative;
+    top: 18px;
+}
+
+.task-input-card {
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    left: 40px;
+    top: 20px;
+    width: 700px;
+    height: 450px;
+    background-color: rgba(210, 210, 208, 0.856);
+}
+
+.task-input-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgba(223, 223, 222, 0.856);
+}
+
+title {
+    margin-top: 20px;
+}
+
+input {
+    background-color: rgba(223, 223, 222, 0.856);
+    width: 600px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    margin-top: 40px;
+    padding: 0 18px;
+}
+
+textarea {
+    width: 600px;
+    height: 70px;
+    margin-top: 40px;
+    padding: 0 18px;
+    border: none;
+    outline: none;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+button.mat-raised-button {
+    background-color: #2196f3;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+button.mat-raised-button:hover {
+    background-color: #ff9800;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
