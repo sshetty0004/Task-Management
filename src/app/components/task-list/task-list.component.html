@@ -19,10 +19,11 @@
             <input type="date" [(ngModel)]="task.dueDate" />
             <textarea [(ngModel)]="task.description" placeholder="Task Description (Optional)"></textarea>
             <button class="edit-button"
-                style=" margin-left: 198px; position: relative; top: 12px; background-color:  rgba(248, 199, 5, 0.856);"
+                style=" margin-left: 170px; position: relative; top: 12px; background-color:  rgba(248, 199, 5, 0.856);"
                 (click)="editTask(task)">Save</button>
+
             <button class="edit-button"
-                style=" margin-left: 300px; position: relative; bottom: 22px; background-color:rgba(248, 199, 5, 0.856);"
+                style=" margin-left:302px; position: relative; bottom: 22px; background-color:rgba(248, 199, 5, 0.856);"
                 (click)="cancelEdit()">Cancel</button>
         </div>
         <ng-template #viewMode>
